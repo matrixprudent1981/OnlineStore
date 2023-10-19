@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Page</title>
+</head>
+<body>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.description }}</p>
+        <img src="{{ post.image.url }}" alt="{{ post.title }}">
+        <p>Created at: {{ post.created_at }}</p>
+        <p>Updated at: {{ post.updated_at }}</p>
+</body>
+</html>
