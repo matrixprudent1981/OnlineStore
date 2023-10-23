@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Page</title>
+    <!-- Подключаем Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.description }}</p>
-        <img src="{{ post.image.url }}" alt="{{ post.title }}">
-        <p>Created at: {{ post.created_at }}</p>
-        <p>Updated at: {{ post.updated_at }}</p>
+<body class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">{{ post.title }}</h1>
+            <p class="card-text">{{ post.description }}</p>
+            <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.title }}">
+            <p class="card-text">Created at: {{ post.created_at }}</p>
+            <p class="card-text">Updated at: {{ post.updated_at }}</p>
+        </div>
+    </div>
+
+    <!-- Подключаем Bootstrap JS (необходим для некоторых функций) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
